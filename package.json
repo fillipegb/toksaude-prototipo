@@ -24,7 +24,7 @@
     "test:watch": "karma start --auto-watch",
     "test:unit": "karma start --single-run",
     "test:closure": "./scripts/closure-test.sh",
-    "start": "npm run clean && cross-env MDC_ENV=development webpack-dev-server --content-base demos --inline --hot"
+    "start": "npm run dev"
   },
   "devDependencies": {
     "ascii-table": "0.0.9",
