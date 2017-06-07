@@ -2,6 +2,7 @@
   "private": true,
   "description": "Material Components Web",
   "license": "Apache-2.0",
+  "main": "server.js",
   "scripts": {
     "build": "mkdirp build && webpack --progress --colors",
     "build:min": "mkdirp build && cross-env MDC_ENV=production webpack -p --progress --colors",
@@ -23,7 +24,7 @@
     "test:watch": "karma start --auto-watch",
     "test:unit": "karma start --single-run",
     "test:closure": "./scripts/closure-test.sh",
-    "start": "npm run dev"
+    "start": "node server.js"
   },
   "devDependencies": {
     "ascii-table": "0.0.9",
