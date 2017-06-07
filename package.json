@@ -22,7 +22,8 @@
     "posttest": "istanbul report --root coverage text-summary && istanbul check-coverage --lines 95 --statements 95 --branches 95 --functions 95",
     "test:watch": "karma start --auto-watch",
     "test:unit": "karma start --single-run",
-    "test:closure": "./scripts/closure-test.sh"
+    "test:closure": "./scripts/closure-test.sh",
+    "start": "npm run dev"
   },
   "devDependencies": {
     "ascii-table": "0.0.9",
