@@ -24,7 +24,7 @@
     "test:watch": "karma start --auto-watch",
     "test:unit": "karma start --single-run",
     "test:closure": "./scripts/closure-test.sh",
-    "start": "node server.js"
+    "start": "npm run dist"
   },
   "devDependencies": {
     "ascii-table": "0.0.9",
