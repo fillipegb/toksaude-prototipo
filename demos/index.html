@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+Copyright 2017 Google Inc. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+https://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MDC-Web Tab Bar Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/images/logo_components_color_2x_web_48dp.png" />
+    <script src="assets/material-components-web.css.js" charset="utf-8"></script>
+    <link href="demos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" href="material.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="material.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+</head>
+<body>
+<header class="mdc-toolbar mdc-toolbar--fixed demo-header-toolbar">
+    <section>
+            <div class="mdc-toolbar" id="dynamic-demo-toolbar">
+                <div class="mdc-toolbar__row" style="background-color: #26a69a;">
+                    <div class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                        <nav id="dynamic-tab-bar" style="background-color: #26a69a; box-shadow: none;" class="mdc-tab-bar mdc-tab-bar--indicator-accent" role="tablist">
+                            <button class="demo-menu material-icons mdc-toolbar__icon--menu">menu</button>
+                            <a role="tab" aria-controls="panel-1"
+                               class="mdc-tab mdc-tab--active" href="#panel-1">
+                                <span class="mdl-badge" data-badge="4">Solicitações</span>
+                            </a>
+                            <a role="tab" aria-controls="panel-2"
+                               class="mdc-tab" href="#panel-2">
+                                <span class="mdl-badge" data-badge="2">Orçados</span>
+                            </a>
+                            <a role="tab" aria-controls="panel-3"
+                               class="mdc-tab" href="#panel-3">
+                                <span class="mdl-badge" data-badge="1">Aceitos</span>
+                            </a>
+                            <span class="mdc-tab-bar__indicator"></span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+    </section>
+</header>
+
+
+<aside class="mdc-temporary-drawer">
+    <nav class="mdc-temporary-drawer__drawer">
+        <header class="mdc-temporary-drawer__header" style="background-color: #26a69a;">
+            <div class="mdc-temporary-drawer__header-content">
+                Configurações
+            </div>
+        </header>
+        <nav class="mdc-temporary-drawer__content mdc-list-group" style="background-color: white;">
+            <div id="icon-with-text-demo" class="mdc-list">
+                <a class="mdc-list-item mdc-temporary-drawer--selected" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">inbox</i>Perfil
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">star</i>Avaliações
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">send</i>Relatórios
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">drafts</i>Cancelamentos
+                </a>
+            </div>
+
+            <hr class="mdc-list-divider">
+        </nav>
+    </nav>
+</aside>
+
+<main id="tabs-demo-main-section" class="mdc-toolbar-fixed-adjust">
+    <section>
+        <div class="panels">
+            <div class="panel active" id="panel-1" aria-hidden="true" w3-include-html="solicitacoes.html" ></div>
+            <div class="panel" id="panel-2" aria-hidden="true" w3-include-html="orcados.html" ></div>
+            <div class="panel" id="panel-3" aria-hidden="true" w3-include-html="aceitos.html" ></div>
+        </div>
+    </section>
+</main>
+
+<footer class="page-footer" style="background-color: #26a69a; padding-top: 0;">
+    <div class="footer-copyright">
+        <div class="container">
+            © 2017 Copyright Tok-Saúde
+        </div>
+    </div>
+</footer>
+<script src="assets/material-components-web.js" charset="utf-8"></script>
+<script src="control.js" charset="utf-8"></script>
+<script>
+    var drawerEl = document.querySelector('.mdc-temporary-drawer');
+    var MDCTemporaryDrawer = mdc.drawer.MDCTemporaryDrawer;
+    var drawer = new MDCTemporaryDrawer(drawerEl);
+    document.querySelector('.demo-menu').addEventListener('click', function() {
+        drawer.open = true;
+    });
+    drawerEl.addEventListener('MDCTemporaryDrawer:open', function() {
+        console.log('Received MDCTemporaryDrawer:open');
+    });
+    drawerEl.addEventListener('MDCTemporaryDrawer:close', function() {
+        console.log('Received MDCTemporaryDrawer:close');
+    });
+</script>
+</body>
+</html>

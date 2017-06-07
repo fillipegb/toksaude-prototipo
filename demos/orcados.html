@@ -1,0 +1,155 @@
+
+<!--<div class="mdc-list-group" center>
+    <ul class="mdc-list mdc-list&#45;&#45;two-line mdc-list&#45;&#45;avatar-list two-line-avatar-text-icon-demo">
+        <li class="mdc-list-item">
+                  <span class="mdc-list-item__start-detail grey-bg" role="presentation">
+                      <a id="dialog-with-list-activation" href="#" style="color: white">
+                        <i class="fa fa-info fa-2x" aria-hidden="true"></i>
+                      </a>
+                  </span>
+            <span class="mdc-list-item__text">
+                    Dipirona
+                    <span class="mdc-list-item__text__secondary">02/06/2017 19:26</span>
+                  </span>
+            <a href="#" class="mdc-list-item__end-detail material-icons"
+               aria-label="View more information" title="More info"
+               onclick="event.preventDefault();">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr class="mdc-list-divider mdc-list-divider&#45;&#45;inset">
+        <li class="mdc-list-item">
+                  <span class="mdc-list-item__start-detail grey-bg" role="presentation">
+                      <a href="#" style="color: white">
+                        <i class="fa fa-info fa-2x" aria-hidden="true"></i>
+                      </a>
+                  </span>
+            <span class="mdc-list-item__text">
+                    Aspirina
+                    <span class="mdc-list-item__text__secondary">02/06/2017 17:50</span>
+                  </span>
+            <a href="#" class="mdc-list-item__end-detail material-icons"
+               aria-label="View more information" title="More info"
+               onclick="event.preventDefault();">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr class="mdc-list-divider mdc-list-divider&#45;&#45;inset">
+        <li class="mdc-list-item">
+                  <span class="mdc-list-item__start-detail grey-bg" role="presentation">
+                      <a href="#" style="color: white">
+                        <i class="fa fa-info fa-2x" aria-hidden="true"></i>
+                      </a>
+                  </span>
+            <span class="mdc-list-item__text">
+                    Neosaldina
+                    <span class="mdc-list-item__text__secondary">02/06/2017 17:06</span>
+                  </span>
+            <a href="#" class="mdc-list-item__end-detail material-icons"
+               aria-label="View more information" title="More info"
+               onclick="event.preventDefault();">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>-->
+
+
+<ul class="collection" style="width: 70%; margin: 0 auto;">
+    <li class="collection-item avatar">
+        <a id="dialog-with-list-activation" href="#">
+            <i class="medium material-icons circle green">speaker_notes</i>
+        </a>
+        <span class="title"><b>Dipirona</b></span>
+        <p>Usuário: Fillipe <br>
+            Data : 06/06/2017 18:00
+        </p>
+        <a href="#" class="secondary-content mdc-list-item__end-detail material-icons"
+           aria-label="View more information" title="More info"
+           onclick="event.preventDefault();">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li class="collection-item avatar">
+        <a id="dialog-with-list-activation2" href="#">
+            <i class="medium material-icons circle green">speaker_notes</i>
+        </a>
+        <span class="title"><b>Aspirina</b></span>
+        <p>Usuário: João <br>
+            Data : 06/06/2017 18:35
+        </p>
+        <a href="#" class="secondary-content mdc-list-item__end-detail material-icons"
+           aria-label="View more information" title="More info"
+           onclick="event.preventDefault();">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li class="collection-item avatar">
+        <a id="dialog-with-list-activation3" href="#">
+            <i class="medium material-icons circle green">speaker_notes</i>
+        </a>
+        <span class="title"><b>Neosaldina</b></span>
+        <p>Usuário: André <br>
+            Data : 06/06/2017 18:45
+        </p>
+        <a href="#" class="secondary-content mdc-list-item__end-detail material-icons"
+           aria-label="View more information" title="More info"
+           onclick="event.preventDefault();">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li class="collection-item avatar">
+        <a id="dialog-with-list-activation4" href="#">
+            <i class="medium material-icons circle green">speaker_notes</i>
+        </a>
+        <span class="title"><b>Dipirona</b></span>
+        <p>Usuário: Fillipe <br>
+            Data : 06/06/2017 18:00
+        </p>
+        <a href="#" class="secondary-content mdc-list-item__end-detail material-icons"
+           aria-label="View more information" title="More info"
+           onclick="event.preventDefault();">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+    </li>
+</ul>
+
+
+
+
+
+<div class="demo-body">
+    <aside id="mdc-dialog-with-list"
+           class="mdc-dialog"
+           role="alertdialog"
+           aria-hidden="true"
+           aria-labelledby="mdc-dialog-with-list-label"
+           aria-describedby="mdc-dialog-with-list-description">
+        <div class="mdc-dialog__surface">
+            <header class="mdc-dialog__header">
+                <h2 id="mdc-dialog-with-list-label" class="mdc-dialog__header__title">
+                    Detallhes do Pedido
+                </h2>
+            </header>
+            <section id="mdc-dialog-with-list-description" class="mdc-dialog__body mdc-dialog__body--scrollable">
+                <ul class="mdc-list">
+                    <li class="mdc-list-item"><b>Medicamento Ético: </b><i>Dipirona</i></li>
+                    <li class="mdc-list-item"><b>Valor:</b><i>30,00</i></li>
+                    <hr class="mdc-list-divider">
+                    <li class="mdc-list-item"><b>Medicamento Genérico:</b><i>Dipirona 200mg</i></li>
+                    <li class="mdc-list-item"><b>Valor:</b><i>20,00</i></li>
+                    <hr class="mdc-list-divider">
+                    <li class="mdc-list-item"><b>Medicamento Similar:</b><i>Dipirona 300mg</i></li>
+                    <li class="mdc-list-item"><b>Valor:</b><i>10,00</i></li>
+                    <hr class="mdc-list-divider">
+                    <li class="mdc-list-item"><b>Entrega:</b><i>Sim</i></li>
+                    <li class="mdc-list-item"><b>Usuário:</b><i>João</i></li>
+                </ul>
+            </section>
+            <footer class="mdc-dialog__footer">
+                <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Fechar</button>
+            </footer>
+        </div>
+        <div class="mdc-dialog__backdrop"></div>
+    </aside>
+</div>
